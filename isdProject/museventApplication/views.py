@@ -12,9 +12,6 @@ from rest_framework.filters import OrderingFilter, SearchFilter
 class CantonViewSet(viewsets.ModelViewSet):
     queryset = Canton.objects.all()
     serializer_class = CantonSerializer
-    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
-    filter_backends = [DjangoFilterBackend, OrderingFilter, SearchFilter]
-    filter_fields = '__all__'
 
 
 class VisitorViewSet(viewsets.ModelViewSet):
@@ -33,7 +30,6 @@ class PlaceViewSet(viewsets.ModelViewSet):
     filter_backends = [DjangoFilterBackend, OrderingFilter, SearchFilter]
     filter_fields = ['name', 'address']
     search_fields = ['name', 'address']
-
 
 
 class EventViewSet(viewsets.ModelViewSet):
@@ -58,13 +54,9 @@ class RatePlaceViewSet(viewsets.ModelViewSet):
     queryset = RatePlace.objects.all()
     serializer_class = RatePlaceSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
-    filter_backends = [DjangoFilterBackend, OrderingFilter, SearchFilter]
-    filter_fields = '__all__'
 
 
 class ParticipationViewSet(viewsets.ModelViewSet):
     queryset = Participation.objects.all()
     serializer_class = ParticipationSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
-    filter_backends = [DjangoFilterBackend, OrderingFilter, SearchFilter]
-    filter_fields = '__all__'
