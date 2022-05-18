@@ -4,5 +4,12 @@
     <file url="file://$PROJECT_DIR$/museventApplication/migrations/0001_initial.py" />
     <file url="file://$PROJECT_DIR$/museventApplication/migrations/__init__.py" />
   </component>
+<<<<<<< HEAD
   <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.9 (isdProject)" project-jdk-type="Python SDK" />
+=======
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.8" project-jdk-type="Python SDK" />
+  <component name="PyCharmProfessionalAdvertiser">
+    <option name="shown" value="true" />
+  </component>
+>>>>>>> 7c322da08a1cf34cca3545d33949884cf9acb70c
 </project>
