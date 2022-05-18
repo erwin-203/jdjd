@@ -2,9 +2,11 @@ asgiref==3.5.2
 cached-property==1.5.2
 Django==4.0.4
 django-cors-headers==3.12.0
-django-url-filter @ git+https://github.com/bernd-wechner/django-url-filter@d0ae1ab23cf58bc800048eb21e2423c0e3efbda0
+django-url-filter==0.3.15
 djangorestframework==3.13.1
+djangorestframework-simplejwt==5.1.0
 enum-compat==0.0.3
+PyJWT==2.4.0
 pytz==2022.1
 six==1.16.0
 sqlparse==0.4.2
