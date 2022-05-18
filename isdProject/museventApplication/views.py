@@ -19,24 +19,36 @@ class VisitorViewSet(viewsets.ModelViewSet):
     queryset = Visitor.objects.all()
     serializer_class = VisitorSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    filter_backends = [DjangoFilterBackend, OrderingFilter, SearchFilter]
+    filter_fields = ['first_name', 'last_name', 'username']
+    search_fields = ['first_name', 'last_name', 'username']
 
 
 class PlaceViewSet(viewsets.ModelViewSet):
     queryset = Place.objects.all()
     serializer_class = PlaceSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    filter_backends = [DjangoFilterBackend, OrderingFilter, SearchFilter]
+    filter_fields = ['name', 'address']
+    search_fields = ['name', 'address']
 
 
 class EventViewSet(viewsets.ModelViewSet):
     queryset = Event.objects.all()
     serializer_class = EventSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    filter_backends = [DjangoFilterBackend, OrderingFilter, SearchFilter]
+    filter_fields = ['name', 'description', 'add_date']
+    search_fields = ['name', 'description', 'add_date']
 
 
 class RateEventViewSet(viewsets.ModelViewSet):
     queryset = RateEvent.objects.all()
     serializer_class = RateEventSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    filter_backends = [DjangoFilterBackend, OrderingFilter, SearchFilter]
+    filter_fields = ['name']
+    search_fields = ['name']
 
 
 class RatePlaceViewSet(viewsets.ModelViewSet):
