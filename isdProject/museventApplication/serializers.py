@@ -11,7 +11,9 @@ class CantonSerializer(serializers.HyperlinkedModelSerializer):
 class VisitorSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Visitor
-        fields = ('username', 'first_name', 'last_name', 'email', 'url')
+        fields = ('username', 'first_name', 'last_name', 'email', 'url', 'password')
+        extra_kwargs = {'password': {'write_only': True, 'min_length': 5}}
+
 
 
 class PlaceSerializer(serializers.HyperlinkedModelSerializer):

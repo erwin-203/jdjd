@@ -17,7 +17,7 @@ class CantonViewSet(viewsets.ModelViewSet):
 class VisitorViewSet(viewsets.ModelViewSet):
     queryset = Visitor.objects.all()
     serializer_class = VisitorSerializer
-    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    #permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     filter_backends = [DjangoFilterBackend, OrderingFilter, SearchFilter]
     filter_fields = ['first_name', 'last_name', 'username']
     search_fields = ['first_name', 'last_name', 'username']
