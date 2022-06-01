@@ -49,6 +49,8 @@ class Event(models.Model):
     start_time = models.TimeField()
     end_time = models.TimeField()
     organizer = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.DO_NOTHING)
+    place = models.ForeignKey(Place, on_delete=models.DO_NOTHING)
+
 
 
 class RateEvent(models.Model):
