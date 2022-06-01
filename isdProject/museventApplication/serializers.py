@@ -2,7 +2,7 @@ from rest_framework import serializers
 from .models import *
 
 
-class CantonSerializer(serializers.HyperlinkedModelSerializer):
+class CantonSerializer(serializers.ModelSerializer):
     class Meta:
         model = Canton
         fields = '__all__'
@@ -16,7 +16,7 @@ class VisitorSerializer(serializers.HyperlinkedModelSerializer):
 
 
 
-class PlaceSerializer(serializers.HyperlinkedModelSerializer):
+class PlaceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Place
         fields = '__all__'

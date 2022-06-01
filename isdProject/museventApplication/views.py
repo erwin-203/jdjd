@@ -28,7 +28,7 @@ class PlaceViewSet(viewsets.ModelViewSet):
     serializer_class = PlaceSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     filter_backends = [DjangoFilterBackend, OrderingFilter, SearchFilter]
-    filter_fields = ['name', 'address']
+    filter_fields = ['name', 'address', 'canton']
     search_fields = ['name', 'address']
 
 
